@@ -1,0 +1,36 @@
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+$background-bottom: #fff;
+$background-top: #eee;
+$dark-background-bottom: #282c34;
+$dark-background-top: lighten($background-bottom, 5%);
+
+:root {
+  --background-bottom: #{$background-bottom};
+  --background-top: #{$background-top};
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --background-bottom: #{$dark-background-bottom};
+    --background-top: #{$dark-background-top};
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:  var(--background-bottom);
+  color: var(--background-top);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

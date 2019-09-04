@@ -1,0 +1,33 @@
+.ba-files-entry {
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+} 
+.ba-files-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.ba-files-ctime {
+    width: 10em;
+}
+
+.ba-files-mtime {
+    width: 10em;
+}
+
+.ba-files-checkbox {
+    width: 1.5em;
+}
+
+.ba-files-atime {
+    width: 10em;
+}
+
+.ba-files-table td {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+}

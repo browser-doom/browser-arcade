@@ -1,0 +1,3 @@
+[submodule "games/doom"]
+	path = games/doom
+	url = https://github.com/browser-doom/crispy-browser-doom
