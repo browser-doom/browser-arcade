@@ -10,4 +10,4 @@ script:
 - npm run docker:build:games
 - npm run build
 - npm run docker:build:server
-- docker push fredrikaleksander/browser-arcade:latest
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push fredrikaleksander/browser-arcade:latest
