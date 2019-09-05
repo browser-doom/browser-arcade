@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/browser-doom/browser-arcade.svg?branch=master)](https://travis-ci.org/browser-doom/browser-arcade)
+
 **IMPORTANT**: Docker is required for compiling the games into Web Assembly. Some games require a modified Emscripten toolchain and/or
 a custom version, and to avoid burdening the user with downloading, patching and building a Emscripten toolchain, Docker is used
 for building the games
