@@ -11,7 +11,14 @@
 # production
 /build
 /build-games
-/src/games
+/src/games/doom/crispybrowser-doom.js
+/src/games/doom/crispybrowser-doom.wasm
+/src/games/doom/crispybrowser-heretic.js
+/src/games/doom/crispybrowser-heretic.wasm
+/src/games/doom/crispybrowser-hexen.js
+/src/games/doom/crispybrowser-hexen.wasm
+/src/games/doom/crispybrowser-strife.js
+/src/games/doom/crispybrowser-strife.wasm
 
 # misc
 .DS_Store

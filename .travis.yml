@@ -6,5 +6,8 @@ services:
 
 script:
 - npm install
-- npm run docker:build:full
+- npm run docker:build:toolchain
+- npm run docker:build:games
 - npm run build
+- npm run docker:build:server
+- docker push fredrikaleksander/browser-arcade:latest

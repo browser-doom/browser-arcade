@@ -79,16 +79,12 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "start-api": "node scripts/api.js",
-    "build": "npm run docker:build && node scripts/build.js",
+    "build": "npm run docker:build:games && node scripts/build.js",
     "test": "node scripts/test.js",
     "docker:build:games:doom": "node scripts/build-doom.js",
     "docker:build:games": "npm run docker:build:games:doom",
     "docker:build:server": "node scripts/build-server.js",
-    "docker:build:toolchain": "docker build -t fredrikaleksander/browser-arcade-toolchain:latest toolchains/emscripten",
-    "docker:build:full": "npm run docker:build:toolchain && npm run docker:build",
-    "docker:build": "npm run docker:build:games && npm run docker:build:server",
-    "deploy": "npm run docker:build"
+    "docker:build:toolchain": "docker build -t fredrikaleksander/browser-arcade-toolchain:latest toolchains/emscripten"
   },
   "eslintConfig": {
     "extends": "react-app"
