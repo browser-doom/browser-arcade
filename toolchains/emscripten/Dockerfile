@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install some required packages
 RUN apt-get update && \
-    apt-get -y install python2.7 build-essential wget git libxml2
+    apt-get -y install python2.7 build-essential wget git libxml2 default-jre
 
 # Need to build a recent version of CMake (>= 3.12)
 

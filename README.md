@@ -8,7 +8,7 @@ for building the games
 
 In the project directory, you can run:
 
-### `npm docker:build`
+### `npm run docker:build`
 
 This will do a build of all games. This is a required step that must be done before `npm start` will work.
 

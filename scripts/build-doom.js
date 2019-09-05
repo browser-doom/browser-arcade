@@ -20,6 +20,7 @@ function createDir(p) {
 
 createDir(`${hostCwd}/build-games/doom`);
 createDir(`${hostCwd}/src/games/doom`);
+createDir(`${hostCwd}/public/games/doom`);
 
 const { spawn } = require('child_process');
 const child = spawn(command, args);
@@ -34,7 +35,7 @@ child.on('close', (code) => {
   if(code === 0) {
       ['crispybrowser-doom', 'crispybrowser-heretic', 'crispybrowser-hexen', 'crispybrowser-strife'].forEach(name => {
           fs.copyFileSync(`${hostCwd}/build-games/doom/src/${name}.js`, `${hostCwd}/src/games/doom/${name}.js`);
-          fs.copyFileSync(`${hostCwd}/build-games/doom/src/${name}.wasm`, `${hostCwd}/src/games/doom/${name}.wasm`);
+          fs.copyFileSync(`${hostCwd}/build-games/doom/src/${name}.wasm`, `${hostCwd}/public/games/doom/${name}.wasm`);
       });
   }
 

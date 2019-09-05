@@ -29,6 +29,7 @@
     "file-loader": "3.0.1",
     "fs-extra": "7.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
+    "http-proxy-middleware": "^0.20.0",
     "identity-obj-proxy": "3.0.0",
     "is-wsl": "^1.1.0",
     "jest": "24.8.0",
@@ -36,6 +37,7 @@
     "jest-resolve": "24.8.0",
     "jest-watch-typeahead": "0.3.1",
     "mini-css-extract-plugin": "0.5.0",
+    "node-static": "^0.7.11",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.5.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -61,6 +63,7 @@
     "webpack": "4.39.1",
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
+    "websocket": "^1.0.29",
     "workbox-webpack-plugin": "4.3.1"
   },
   "devDependencies": {
@@ -71,16 +74,21 @@
     "@types/react-dom": "16.9.0",
     "@types/react-redux": "^7.1.2",
     "node-sass": "^4.12.0",
-    "react-dev-utils": "^9.0.3"
+    "react-dev-utils": "^9.0.3",
+    "webpack-cli": "^3.3.7"
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "start-api": "node scripts/api.js",
     "build": "npm run docker:build && node scripts/build.js",
     "test": "node scripts/test.js",
-    "docker:build:doom": "node scripts/build-doom.js",
+    "docker:build:games:doom": "node scripts/build-doom.js",
+    "docker:build:games": "npm run docker:build:games:doom",
+    "docker:build:server": "node scripts/build-server.js",
     "docker:build:toolchain": "docker build -t fredrikaleksander/browser-arcade-toolchain:latest toolchains/emscripten",
     "docker:build:full": "npm run docker:build:toolchain && npm run docker:build",
-    "docker:build": "npm run docker:build:doom"
+    "docker:build": "npm run docker:build:games && npm run docker:build:server",
+    "deploy": "npm run docker:build"
   },
   "eslintConfig": {
     "extends": "react-app"
