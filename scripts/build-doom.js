@@ -6,7 +6,7 @@ const args = [
     'run',
     '-v', `${hostCwd}/games/doom/:/work`,
     '-v', `${hostCwd}/build-games/doom:/build`,
-    'browser-arcade-toolchain:latest',
+    'fredrikaleksander/browser-arcade-toolchain:latest',
     '/bin/bash', '-c', 'cd /build && emcmake cmake -DCMAKE_BUILD_TYPE=Release /work && emmake make crispybrowser-doom crispybrowser-heretic crispybrowser-hexen crispybrowser-strife'
 ];
 

@@ -73,10 +73,11 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "npm run docker:build:toolchain && npm run docker:build && node scripts/build.js",
+    "build": "npm run docker:build && node scripts/build.js",
     "test": "node scripts/test.js",
     "docker:build:doom": "node scripts/build-doom.js",
-    "docker:build:toolchain": "docker build -t browser-arcade-toolchain:latest toolchains/emscripten",
+    "docker:build:toolchain": "docker build -t fredrikaleksander/browser-arcade-toolchain:latest toolchains/emscripten",
+    "docker:build:full": "npm run docker:build:toolchain && npm run docker:build",
     "docker:build": "npm run docker:build:doom"
   },
   "eslintConfig": {

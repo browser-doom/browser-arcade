@@ -1,6 +1,6 @@
-IMPORTANT: Docker is required for compiling the games into Web Assembly. Some games require a modified Emscripten toolchain and/or
+**IMPORTANT**: Docker is required for compiling the games into Web Assembly. Some games require a modified Emscripten toolchain and/or
 a custom version, and to avoid burdening the user with downloading, patching and building a Emscripten toolchain, Docker is used
-for building the games.
+for building the games
 
 ## Available Scripts
 
