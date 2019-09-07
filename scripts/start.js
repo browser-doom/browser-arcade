@@ -14,8 +14,6 @@ process.on('unhandledRejection', err => {
 // Ensure environment variables are read.
 require('../config/env');
 
-
-const api = require('../server/api');
 const fs = require('fs');
 const chalk = require('react-dev-utils/chalk');
 const webpack = require('webpack');

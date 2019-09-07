@@ -5,6 +5,11 @@ import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import api from './services/api';
+
+const { getPlayerId } = api.example;
+
+getPlayerId().then(console.log).catch(console.error);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

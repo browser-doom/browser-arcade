@@ -1,17 +1,28 @@
-const WebsocketServer = require('websocket').server;
+const socketio = require('socket.io');
+const jsonRpcInvoke = require('./rpc').jsonRpcInvoke;
+
+require('./api/example');
 
 module.exports = (PORT, handler) => {
     const server = require('http').createServer(handler || ((req, res) => {
     }));
-    server.listen(PORT);
+    const io = socketio(server, { path: '/api' });
 
-    const websocketServer = new WebsocketServer({ httpServer: server });
-    websocketServer.on('request', function(request) {
-        const connection = request.accept(null, request.origin);
-        connection.on('message', (message) => {
-            connection.send('test');
+    io.on('connection', function(socket) {
+        const playerId = socket.id;
+        const context = {
+            player: { id: playerId }
+        };
+
+        socket.on('rpc', (message) => {
+            jsonRpcInvoke(message, context, socket);
         });
-        connection.on('close', (connection) => {
+
+        socket.on('disconnect', () => {
         });
     });
+
+    server.listen(PORT);
+
+    return server;
 };
