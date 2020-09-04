@@ -76,7 +76,7 @@
     "@types/react-redux": "^7.1.2",
     "@types/socket.io": "^2.1.2",
     "@types/socket.io-client": "^1.4.32",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react-dev-utils": "^9.0.3",
     "webpack-cli": "^3.3.7"
   },
